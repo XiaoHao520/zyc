@@ -9,10 +9,9 @@ defined('YII_RUN') or exit('Access Denied');
 $urlManager = Yii::$app->urlManager;
 $this->title = '编辑门店';
 $this->params['active_nav_group'] = 1;
-
 ?>
 
-
+<head> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> </head>
 
 <script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=key=OB4BZ-D4W3U-B7VVO-4PJWW-6TKDJ-WPB77"></script>
 <div class="panel mb-3">
@@ -200,7 +199,8 @@ $this->params['active_nav_group'] = 1;
                         <label class=" col-form-label">可核销的码头：</label>
                     </div>
                     <div class="col-9">
-
+                        <input class="form-control" name="docks_name" type="text" value="<?= $shop->docks_name ?>">
+                        <input type='hidden' name="docks_id" value="<?= $shop->docks_id ?>">
                     </div>
                 </div>
 
@@ -208,13 +208,11 @@ $this->params['active_nav_group'] = 1;
                     <div class="col-3 text-right">
                         <label class=" col-form-label">码头列表：</label>
                     </div>
-                    <div class="col-9">
-
-                        <?php echo "中午呢"?>
+                    <div class="col-9" style="display: flex">
                        <?php foreach ($docks as $dock): ?>
-                        <div class="col-3">
-                            <input type="checkbox" value="<?=$dock['name']?>"><?=$dock['name']?>
-                        </div>
+                            <div style="width: 100px">
+                            <input id="<?=$dock['id']?>" type="checkbox" name="dock" data-id="<?=$dock['id']?>" value="<?=$dock['name']?>"><?=$dock['name']?>
+                            </div>
                          <?php endforeach; ?>
                     </div>
 
@@ -263,14 +261,27 @@ $this->params['active_nav_group'] = 1;
     });
 
 
-    var page=new Vue({
-        el:'#page',
-        data:{
-            docks:JSON.parse('<?=json_encode($docks,JSON_UNESCAPED_UNICODE)?>')
+$('input:checkbox').click(
 
-        }
-    })
-    console.log(JSON.parse('<?=json_encode($docks)?>'));
+    function () {
+        var str='';
+         var ids=''
+        console.log(this.id)
+
+        $("input[name='dock']").each(function(){
+            if($(this).is(":checked"))
+            {
+               ids+=this.id+',';
+               str+=$(this).val()+',';
+               console.log(str)
+            }
+        });
+         $("input[name='docks_id']").val(ids);
+         $("input[name='docks_name']").val(str);
+
+    }
+ )
+
 
 
 

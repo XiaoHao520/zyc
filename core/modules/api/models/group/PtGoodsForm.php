@@ -11,6 +11,7 @@ namespace app\modules\api\models\group;
 
 use app\models\Article;
 use app\models\Order;
+use app\models\PtCat;
 use app\models\PtGoods;
 use app\models\PtGoodsPic;
 use app\models\PtOrder;
@@ -174,7 +175,7 @@ class PtGoodsForm extends Model
             ->select('pic_url')
             ->andWhere(['goods_id'=>$this->gid,'is_delete'=>0])
             ->column();
-
+        $info['buy_method']=PtCat::find()->select('buy_method')->where(['id'=>$info['cat_id']])->asArray()->one();
         $info['attr'] = json_decode($info['attr'],true);
         $info['service'] = explode(',',$info['service']);
         $attr_group_list = $goods->getAttrGroupList();

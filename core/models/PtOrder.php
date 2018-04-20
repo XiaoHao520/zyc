@@ -46,6 +46,8 @@ use Yii;
  * @property integer $shop_id
  * @property integer $offline
  * @property integer $clerk_id
+ * @property string $baoxian
+ * @property string $time;
  */
 class PtOrder extends \yii\db\ActiveRecord
 {
@@ -69,6 +71,7 @@ class PtOrder extends \yii\db\ActiveRecord
             [['address_data', 'content', 'words'], 'string'],
             [['order_no', 'name', 'mobile', 'express', 'express_no'], 'string', 'max' => 255],
             [['address', 'remark'], 'string', 'max' => 1000],
+            [['baoxian', 'time'], 'default', 'value' => null],
         ];
     }
 
@@ -117,6 +120,8 @@ class PtOrder extends \yii\db\ActiveRecord
             'shop_id' => '自提店铺',
             'offline' => '拿货方式',
             'clerk_id' => '核销员ID',
+            'baoxian'=>'保险',
+            'time'=>'出发时间'
         ];
     }
 

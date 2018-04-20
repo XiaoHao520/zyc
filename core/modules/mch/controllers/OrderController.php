@@ -205,11 +205,17 @@ class OrderController extends Controller
         if($order_refund){
             $order['refund'] = $order_refund->status;
         }
+
+
+
+        $baoxian=json_decode($order['baoxian'],true);
+
         return $this->render('detail',[
             'order'=>$order,
             'goods_list'=>$goods_list,
             'user'=>$user,
-            'order_form'=>$order_form
+            'order_form'=>$order_form,
+            'baoxian_list'=>$baoxian
         ]);
     }
     public function actionOffline()

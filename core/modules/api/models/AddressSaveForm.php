@@ -26,22 +26,34 @@ class AddressSaveForm extends Model
 
     public function rules()
     {
+
         return [
+            [['name', 'mobile'], 'trim'],
+            [['name', 'mobile'], 'required'],
+            [['address_id',], 'integer'],
+        ];
+
+       /* return [
             [['name', 'mobile', 'province_id', 'city_id', 'district_id', 'detail',], 'trim'],
             [['name', 'mobile', 'province_id', 'city_id', 'district_id', 'detail',], 'required'],
             [['address_id',], 'integer'],
-        ];
+        ];*/
     }
 
     public function attributeLabels()
     {
-        return [
+        /*return [
             'name' => '收货人',
             'mobile' => '联系电话',
             'province_id' => '所在地区',
             'city_id' => '所在地区',
             'district_id' => '所在地区',
             'detail' => '详细地址',
+        ];*/
+        return [
+            'name' => '收货人',
+            'mobile' => '联系电话',
+
         ];
     }
 
@@ -65,9 +77,9 @@ class AddressSaveForm extends Model
         }
         $address->name = $this->name;
         $address->mobile = $this->mobile;
-        $address->detail = $this->detail;
+//        $address->detail = $this->detail;
 
-        $province = District::findOne($this->province_id);
+       /* $province = District::findOne($this->province_id);
         if (!$province) {
             return [
                 'code' => 1,
@@ -95,7 +107,7 @@ class AddressSaveForm extends Model
             ];
         }
         $address->district_id = $district->id;
-        $address->district = $district->name;
+        $address->district = $district->name;*/
 
         if ($address->save()) {
             return [

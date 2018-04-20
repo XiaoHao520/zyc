@@ -32,7 +32,8 @@ use yii\web\IdentityInterface;
  * @property integer $level
  * @property integer $integral
  * @property integer $total_integral
- */
+ * @property integer $dock_id
+ * */
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
     /**
@@ -49,7 +50,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['type', 'addtime', 'is_delete', 'store_id', 'is_distributor', 'parent_id', 'time', 'is_clerk', 'we7_uid', 'shop_id', 'level'], 'integer'],
+            [['type', 'addtime', 'is_delete', 'store_id', 'is_distributor', 'parent_id', 'time', 'is_clerk', 'we7_uid', 'shop_id', 'level','dock_id'], 'integer'],
             [['username', 'password', 'auth_key', 'access_token', 'avatar_url'], 'required'],
             [['avatar_url'], 'string'],
             [['total_price', 'price', 'integral', 'total_integral'], 'number'],
@@ -87,6 +88,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             'level' => '会员等级',
             'integral' => '用户当前积分',
             'total_integral' => '用户总积分',
+            'dock_id'=>0
         ];
     }
 

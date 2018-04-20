@@ -9,8 +9,11 @@
 namespace app\modules\api\models;
 
 
+use app\models\Goods;
 use app\models\Order;
+use app\models\OrderDetail;
 use app\models\User;
+use function GuzzleHttp\Promise\all;
 
 class OrderClerkForm extends Model
 {
@@ -20,42 +23,59 @@ class OrderClerkForm extends Model
 
     public function save()
     {
-        $order = Order::findOne(['id'=>$this->order_id,'store_id'=>$this->store_id,'is_pay'=>1]);
-        if(!$order){
+        $order = Order::findOne(['id' => $this->order_id, 'store_id' => $this->store_id, 'is_pay' => 1]);
+        //$oderDetail_list=OrderDetail::find()->where(['order_id'=>$order->id])->asArray()->all();
+        if (!$order) {
             return [
-                'code'=>1,
-                'msg'=>'网络异常-1'
+                'code' => 1,
+                'msg' => '网络异常-1'
             ];
         }
-        $user = User::findOne(['id'=>$this->user_id]);
-        if($user->is_clerk == 0){
+        $user = User::findOne(['id' => $this->user_id]);
+        if ($user->is_clerk == 0) {
             return [
-                'code'=>1,
-                'msg'=>'不是核销员'
+                'code' => 1,
+                'msg' => '不是核销员'
             ];
         }
-        if($order->is_send == 1){
+        $is_dock_clerk = false;
+        if ($order->dock_id == $user->dock_id) {
+            $is_dock_clerk = true;
+        }
+
+        if (!$is_dock_clerk) {
             return [
-                'code'=>1,
-                'msg'=>'订单已核销'
+                'code' => 1,
+                'msg' => '你不是本店的核销员',
+
             ];
+        }
+        if ($order->is_send == 1) {
+            if($order->is_confirm ==1){
+                return [
+                    'code' => 1,
+                    'msg' => '订单已核销'
+                ];
+            }
+
         }
         $order->clerk_id = $user->id;
         $order->is_send = 1;
         $order->shop_id = $user->shop_id;
+        $order->dock_id = $user->dock_id;
         $order->send_time = time();
         $order->is_confirm = 1;
         $order->confirm_time = time();
 
-        if($order->save()){
+        if ($order->save()) {
             return [
-                'code'=>0,
-                'msg'=>'成功'
+                'code' => 0,
+                'msg' => '成功'
             ];
-        }else{
+        } else {
             return [
-                'code'=>1,
-                'msg'=>'网络异常'
+                'code' => 1,
+                'msg' => '网络异常'
             ];
         }
     }

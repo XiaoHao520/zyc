@@ -21,7 +21,7 @@ class PtCatForm extends Model
     public $store_id;
     public $pic_url;
     public $sort;
-
+    public $buy_method;
     /**
      * @inheritdoc
      */
@@ -29,8 +29,9 @@ class PtCatForm extends Model
     {
         return [
             [['name', 'store_id', 'pic_url'], 'required'],
-            [['store_id', 'sort'], 'integer'],
+            [['store_id', 'sort','buy_method'], 'integer'],
             [['pic_url'], 'string'],
+
             [['name'], 'string', 'max' => 255],
         ];
     }
@@ -48,6 +49,7 @@ class PtCatForm extends Model
             'sort' => '排序 升序',
             'addtime' => 'Addtime',
             'is_delete' => 'Is Delete',
+            'buy_method'=>'购买方式'
         ];
     }
 

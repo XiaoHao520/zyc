@@ -323,7 +323,6 @@ if (!$returnUrl)
                                    value="<?/*= $goods['dock'] */?>">-->
 
                             <?php foreach ($docks as $dock): ?>
-
                             <?php if($dock['id']==$goods['dock_id']):?>
                             <label class="radio-inline">
                                 <input type="radio" name="model[dock_id]"  value=" <?=$dock['id']?>" checked>  <?=$dock['name']?>
@@ -342,8 +341,6 @@ if (!$returnUrl)
                                     </label>
                             <?php endif;?>
                            <?php endforeach;?>
-
-
                         </div>
                     </div>
                     <div class="form-group row">

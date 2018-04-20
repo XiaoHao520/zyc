@@ -119,7 +119,7 @@ class GoodsAreaListForm extends Model
 
         $list = $query
             ->leftJoin(['gn' => $od_query], 'gn.goods_id=g.id')
-            ->select('g.id,g.name,g.price,g.original_price,g.cover_pic pic_url,gn.num,g.virtual_sales,g.unit,g.latitude,g.longitude,g.dock,g.capacity')
+            ->select('g.id,g.name,g.price,g.original_price,g.cover_pic pic_url,gn.num,g.virtual_sales,g.unit,g.latitude,g.longitude,g.dock,g.capacity,g.timelong')
             ->limit($pagination->limit)
             ->offset($pagination->offset)
             ->asArray()->all();

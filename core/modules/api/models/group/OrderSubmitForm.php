@@ -30,26 +30,24 @@ class OrderSubmitForm extends Model
 {
     public $store_id;
     public $user_id;
-
     public $address_id;
     public $goods_info;
-
     public $shop_id;
-
     public $use_integral;
-
     public $type;
     public $parent_id;
-
     public $content;
     public $offline;
     public $address_name;
     public $address_mobile;
+    public $baoxian;
+    public $time;
+
 
     public function rules()
     {
         return [
-            [['goods_info', 'content', 'address_name', 'address_mobile'], 'string'],
+            [['goods_info', 'content', 'address_name', 'address_mobile','baoxian','time'], 'string'],
             [['type',], 'required'],
             [['shop_id', 'use_integral'], 'integer'],
             [['parent_id'], 'default', 'value' => 0],
@@ -64,7 +62,8 @@ class OrderSubmitForm extends Model
         return [
             'address_id' => '收货地址',
             'address_name' => '收货人',
-            'address_mobile' => '联系电话'
+            'address_mobile' => '联系电话',
+            'baoxian'=>'保险'
         ];
     }
 
@@ -193,6 +192,9 @@ class OrderSubmitForm extends Model
         $order->express_price = $express_price;
         $order->addtime = time();
         $order->offline = $this->offline;
+        $order->baoxian=$this->baoxian;
+        $order->time=$this->time;
+
 //        $order->address = $address->province . $address->city . $address->district . $address->detail;
 //        $order->mobile = $address->mobile;
 //        $order->name = $address->name;

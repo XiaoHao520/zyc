@@ -9,6 +9,7 @@
 namespace app\modules\mch\models;
 
 
+use app\models\Dock;
 use app\models\Level;
 use app\models\Order;
 use app\models\Shop;
@@ -36,12 +37,19 @@ class UserListForm extends Model
 
     public function search()
     {
-        $query = User::find()->alias('u')->where([
+        /*$query = User::find()->alias('u')->where([
             'u.type' => 1,
             'u.store_id' => $this->store_id,
             'u.is_delete' => 0
         ])->leftJoin(Shop::tableName() . ' s', 's.id=u.shop_id')
-        ->leftJoin(Level::tableName(). ' l','l.level=u.level and l.is_delete = 0 and l.store_id = '.$this->store_id);
+        ->leftJoin(Level::tableName(). ' l','l.level=u.level and l.is_delete = 0 and l.store_id = '.$this->store_id);*/
+        $query = User::find()->alias('u')->where([
+            'u.type' => 1,
+            'u.store_id' => $this->store_id,
+            'u.is_delete' => 0
+        ])->leftJoin(Dock::tableName() . ' d', 'd.id=u.dock_id')
+            ->leftJoin(Level::tableName(). ' l','l.level=u.level and l.is_delete = 0 and l.store_id = '.$this->store_id);
+
         if ($this->keyword)
             $query->andWhere(['LIKE', 'u.nickname', $this->keyword]);
         if ($this->is_clerk == 1) {
@@ -53,7 +61,7 @@ class UserListForm extends Model
         $count = $query->count();
         $pagination = new Pagination(['totalCount' => $count, 'page' => $this->page - 1]);
         $list = $query->select([
-            'u.*', 's.name shop_name','l.name l_name'
+            'u.*', 'd.name dock_name','l.name l_name'
         ])->limit($pagination->limit)->offset($pagination->offset)->orderBy('u.addtime DESC')->asArray()->all();
         $store = Store::findOne(['id' => $this->store_id]);
         foreach ($list as $index => $value) {

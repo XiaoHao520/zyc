@@ -137,7 +137,7 @@ class GoodsController extends Controller
 
 
         $goods = Goods::findOne(['id' => $id, 'store_id' => $this->store->id]);
-         $docks=Dock::find()->where(['store_id'=>$this->store->id,'is_delete'=>0])->all();
+        $docks=Dock::find()->where(['store_id'=>$this->store->id,'is_delete'=>0])->all();
         if (!$goods) {
             $goods = new Goods();
         }

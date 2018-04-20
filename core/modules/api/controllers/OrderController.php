@@ -221,7 +221,7 @@ class OrderController extends Controller
 //        $form->order_no = $order_no;
         $form->data = [
             'scene'=>"{$order_no}",
-           // 'page'=>"pages/clerk/clerk",
+           'page'=>"pages/clerk/clerk",
             'width'=>100
         ];
         $form->store = $this->store;

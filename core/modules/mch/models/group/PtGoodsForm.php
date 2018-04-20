@@ -59,18 +59,13 @@ class PtGoodsForm extends Model
     public $dock_id;
 
 
-
-
-
-
-
     /**
      * @inheritdoc
      */
     public function rules()
     {
         return [
-            [['store_id', 'name', 'original_price', 'price', 'detail', 'group_num', 'grouptime', 'cat_id','address','time','capacity','dock'], 'required'],
+            [['store_id', 'name', 'original_price', 'price', 'detail', 'group_num', 'grouptime', 'cat_id','address','time','capacity','dock','dock_id'], 'required'],
             [['store_id', 'cat_id', 'grouptime', 'sort', 'virtual_sales', 'weight', 'freight', 'group_num', 'limit_time', 'is_only', 'is_more', 'buy_limit', 'type', 'use_attr'], 'integer'],
             [['original_price', 'price', 'colonel'], 'number'],
             [['detail', 'cover_pic','parameter','time'], 'string'],
@@ -121,7 +116,8 @@ class PtGoodsForm extends Model
             'dock'=>'码头',
             'dock_id'=>'码头id',
             'parameter'=>'参数',
-            'time'=>'时间段'
+            'time'=>'时间段',
+            'dock_id'=>'请选择码头'
         ];
     }
 

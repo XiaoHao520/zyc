@@ -15,7 +15,7 @@ $this->params['active_nav_group'] = 4;
     <div class="panel-body">
         <div class="float-left pt-2">
             <a class="btn btn-primary" href="javascript:" data-toggle="modal" data-target="#edit"
-               data-backdrop="static">添加核销员</a>
+               data-backdrop="static">添加核销员----</a>
         </div>
         <div class="float-right mb-4">
             <form method="get">
@@ -43,7 +43,7 @@ $this->params['active_nav_group'] = 4;
                 <th>ID</th>
                 <th>头像</th>
                 <th>昵称</th>
-                <th>所属门店</th>
+                <th>所属码头</th>
                 <th>加入时间</th>
                 <th>身份</th>
                 <th>核销订单数</th>
@@ -58,7 +58,8 @@ $this->params['active_nav_group'] = 4;
                         <img src="<?= $u['avatar_url'] ?>" style="width: 34px;height: 34px;margin: -.6rem 0;">
                     </td>
                     <td><?= $u['nickname']; ?></td>
-                    <td><?= $u['shop_name']; ?></td>
+                    <td><?= $u['dock_name']; ?></td>
+<!--                    <td>--><?//= $u['shop_name']; ?><!--</td>-->
                     <td><?= date('Y-m-d H:i:s', $u['addtime']) ?></td>
                     <td>核销员</td>
                     <td>
@@ -102,25 +103,42 @@ $this->params['active_nav_group'] = 4;
                         <div class="modal-body">
                             <div class="form-group row">
                                 <div class="col-3 text-right">
-                                    <label class="col-form-label required">门店选择</label>
+                                    <label class="col-form-label required">码头选择</label>
                                 </div>
                                 <div class="col-9">
-                                    <template v-if="shop_list.length>0">
+
+                                    <template v-if="dock_list.length>0">
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button"
                                                     id="dropdownMenuButton"
                                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                {{select_shop.name}}
+                                                {{select_dock.name}}
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
                                                  style="max-height: 200px;overflow-y: auto">
                                                 <a class="dropdown-item shop-select" href="javascript:"
-                                                   v-for="(item,index) in shop_list"
+                                                   v-for="(item,index) in dock_list"
                                                    :data-index="index">{{item.name}}</a>
                                             </div>
                                         </div>
                                         <div class="shop-error text-danger" hidden></div>
                                     </template>
+<!--                                    <template v-if="shop_list.length>0">-->
+<!--                                        <div class="dropdown">-->
+<!--                                            <button class="btn btn-secondary dropdown-toggle" type="button"-->
+<!--                                                    id="dropdownMenuButton"-->
+<!--                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                                                {{select_shop.name}}-->
+<!--                                            </button>-->
+<!--                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"-->
+<!--                                                 style="max-height: 200px;overflow-y: auto">-->
+<!--                                                <a class="dropdown-item shop-select" href="javascript:"-->
+<!--                                                   v-for="(item,index) in shop_list"-->
+<!--                                                   :data-index="index">{{item.name}}</a>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="shop-error text-danger" hidden></div>-->
+<!--                                    </template>-->
                                     <template v-else>
                                         <label class="col-form-label">暂未设置门店，<a
                                                 href="<?= $urlManager->createUrl(['mch/store/shop']) ?>">请前往设置</a></label>
@@ -177,7 +195,23 @@ $this->params['active_nav_group'] = 4;
                                     <label class="col-form-label required">门店选择</label>
                                 </div>
                                 <div class="col-9">
-                                    <template v-if="shop_list.length>0">
+                                   <template v-if="dock_list.length>0">
+                                        <div class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                    id="dropdownMenuButton"
+                                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                {{select_dock.name}}
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"
+                                                 style="max-height: 200px;overflow-y: auto">
+                                                <a class="dropdown-item shop-select" href="javascript:"
+                                                   v-for="(item,index) in dock_list"
+                                                   :data-index="index">{{item.name}}</a>
+                                            </div>
+                                        </div>
+                                        <div class="shop-error text-danger" hidden></div>
+                                    </template>
+                                   <!-- <template v-if="shop_list.length>0">
                                         <div class="dropdown">
                                             <button class="btn btn-secondary dropdown-toggle" type="button"
                                                     id="dropdownMenuButton"
@@ -192,7 +226,7 @@ $this->params['active_nav_group'] = 4;
                                             </div>
                                         </div>
                                         <div class="shop-error text-danger" hidden></div>
-                                    </template>
+                                    </template>-->
                                     <template v-else>
                                         <label class="col-form-label">暂未设置门店，<a
                                                 href="<?= $urlManager->createUrl(['mch/store/shop']) ?>">请前往设置</a></label>
@@ -221,6 +255,8 @@ $this->params['active_nav_group'] = 4;
             shop_list:<?=$shop_list?>,
             select_shop: "",
             edit_user_id: "-1",
+            dock_list:<?=$dock_list?>,
+            select_dock:''
         },
         methods: {
             //关键字查询
@@ -252,6 +288,7 @@ $this->params['active_nav_group'] = 4;
         }
     });
     app.select_shop = app.shop_list.length > 0 ? app.shop_list[0] : ""
+    app.select_dock = app.dock_list.length > 0 ? app.dock_list[0] : ""
 </script>
 <script>
     $(document).on('click', '.del', function () {
@@ -281,6 +318,35 @@ $this->params['active_nav_group'] = 4;
         var a = $(this);
         var index = $(this).data('index');
         $('.shop-error').prop('hidden', true);
+        if (app.select_dock == "") {
+            $('.shop-error').prop('hidden', false).html('请先选择码头');
+            return;
+        }
+        $.ajax({
+            url: a.data('url'),
+            type: 'get',
+            dataType: 'json',
+            data: {
+                id: index,
+                dock_id: app.select_dock.id
+            },
+            success: function (res) {
+                if (res.code == 0) {
+                    window.location.reload();
+                } else {
+                    $.myAlert({
+                        title: res.msg
+                    });
+                }
+            }
+        });
+
+
+
+
+   /*     var a = $(this);
+        var index = $(this).data('index');
+        $('.shop-error').prop('hidden', true);
         if (app.select_shop == "") {
             $('.shop-error').prop('hidden', false).html('请先选择门店');
             return;
@@ -302,10 +368,21 @@ $this->params['active_nav_group'] = 4;
                     });
                 }
             }
-        });
+        });*/
         return false;
     });
     $(document).on('click', '.shop-select', function () {
+        var index = $(this).data('index');
+        app.select_dock = app.dock_list[index];
+    });
+    $(document).on('click', '.user-shop-edit', function () {
+        if (app.user_list.length > 0) {
+            app.edit_user_id = $(this).data('id');
+            $('#shop-edit').modal('show');
+        }
+    });
+
+    /*$(document).on('click', '.shop-select', function () {
         var index = $(this).data('index');
         app.select_shop = app.shop_list[index];
     });
@@ -314,6 +391,6 @@ $this->params['active_nav_group'] = 4;
             app.edit_user_id = $(this).data('id');
             $('#shop-edit').modal('show');
         }
-    });
+    });*/
 </script>
 

@@ -50,13 +50,14 @@ class OrderSubmitForm extends Model
     public $payment;
     public $baoxian;
     public $date;
+    public $dock_id;
     public function rules()
     {
         return [
             [['cart_id_list', 'goods_info', 'content', 'address_name', 'address_mobile','baoxian','time','date'], 'string'],
             [['address_id'], 'required', 'on' => "EXPRESS"],
-            [['address_name', 'address_mobile'], 'required', 'on' => "OFFLINE"],
-            [['user_coupon_id', 'offline', 'shop_id', 'use_integral','payment'], 'integer'],
+            [['address_name', 'address_mobile','dock_id'], 'required', 'on' => "OFFLINE"],
+            [['user_coupon_id', 'offline', 'shop_id', 'use_integral','payment','dock_id'], 'integer'],
             [['offline'], 'default', 'value' => 0],
             [['payment'], 'default', 'value' => 0],
             [['form'],'safe']
@@ -70,7 +71,8 @@ class OrderSubmitForm extends Model
             'address_name' => '收货人',
             'address_mobile' => '联系电话',
             'time'=>'时间',
-            'date'=>'日期'
+            'date'=>'日期',
+            'dock_id'=>'商品所属码头'
         ];
     }
 
@@ -362,6 +364,7 @@ class OrderSubmitForm extends Model
         $order->baoxian=$this->baoxian;
         $order->time=$this->time;
         $order->date=$this->date;
+        $order->dock_id=$this->dock_id;
         //此处计算所有的优惠措施
         $total_price_2 = $total_price; //实际支付金额
         //减去 优惠券（不含运费）

@@ -405,14 +405,14 @@ if ($status === '' || $status === null || $status == -1)
                     <tr>
                         <td colspan="5">
                             <div>
-                                <span class="mr-3">收货人：<?= $order_item['name'] ?></span>
+                                <span class="mr-3">联系人：<?= $order_item['name'] ?></span>
                                 <span class="mr-3">电话：<?= $order_item['mobile'] ?></span>
                                 <?php if ($order_item['is_offline'] == 0): ?>
-                                    <span>地址：<?= $order_item['address'] ?></span>
+                                    <span style="display: none">地址：<?= $order_item['address'] ?></span>
                                 <?php endif; ?>
                             </div>
                             <?php if ($order_item['shop_id']): ?>
-                                <div>
+                                <div style="display:none;">
                                     <span class="mr-3">门店名称：<?= $order_item['shop']['name'] ?></span>
                                     <span class="mr-3">门店地址：<?= $order_item['shop']['address'] ?></span>
                                     <span class="mr-3">电话：<?= $order_item['shop']['mobile'] ?></span>

@@ -40,11 +40,18 @@ class Address extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['store_id', 'user_id', 'name', 'mobile'], 'required'],
+            [['store_id', 'user_id', 'is_default', 'addtime', 'is_delete'], 'integer'],
+            [['name', 'mobile',], 'string', 'max' => 255],
+
+        ];
+
+        /*return [
             [['store_id', 'user_id', 'name', 'mobile', 'province', 'city', 'district', 'detail'], 'required'],
             [['store_id', 'user_id', 'province_id', 'city_id', 'district_id', 'is_default', 'addtime', 'is_delete'], 'integer'],
             [['name', 'mobile', 'province', 'city', 'district'], 'string', 'max' => 255],
             [['detail'], 'string', 'max' => 1000],
-        ];
+        ];*/
     }
 
     /**
@@ -53,6 +60,17 @@ class Address extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+            'id' => 'ID',
+            'store_id' => 'Store ID',
+            'user_id' => 'User ID',
+            'name' => '姓名',
+            'mobile' => '手机号',
+            'is_default' => '是否是默认地址：0=否，1=是',
+            'addtime' => 'Addtime',
+            'is_delete' => 'Is Delete',
+        ];
+
+        /*return [
             'id' => 'ID',
             'store_id' => 'Store ID',
             'user_id' => 'User ID',
@@ -68,7 +86,7 @@ class Address extends \yii\db\ActiveRecord
             'is_default' => '是否是默认地址：0=否，1=是',
             'addtime' => 'Addtime',
             'is_delete' => 'Is Delete',
-        ];
+        ];*/
     }
 
     public function beforeSave($insert)

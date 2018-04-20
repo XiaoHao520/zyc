@@ -36,6 +36,28 @@ $this->params['is_group'] = 1;
                                value="<?= $list['sort'] ? $list['sort'] : 100 ?>">
                     </div>
                 </div>
+
+                <div class="form-group row">
+                    <div class="form-group-label col-sm-2 text-right">
+                        <label class="col-form-label">下单方式</label>
+                    </div>
+                    <div class="col-sm-6">
+                        <label class="radio-label">
+                            <input id="radio3" <?= $list['buy_method'] == 0 ? 'checked' : 'checked' ?>
+                                   value="0"
+                                   name="model[buy_method]" type="radio" class="custom-control-input">
+                            <span class="label-icon"></span>
+                            <span class="label-text">普通下单</span>
+                        </label>
+                        <label class="radio-label">
+                            <input id="radio4" <?= $list['buy_method'] == 1 ? 'checked' : null ?>
+                                   value="1"
+                                   name="model[buy_method]" type="radio" class="custom-control-input">
+                            <span class="label-icon"></span>
+                            <span class="label-text">预定下单</span>
+                        </label>
+                    </div>
+                </div>
                 <div class="form-group row">
                     <div class="form-group-label col-sm-2 text-right">
                         <label class="col-form-label">分类图标</label>

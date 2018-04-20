@@ -11,6 +11,7 @@ namespace app\modules\mch\models;
 
 use app\models\Attr;
 use app\models\AttrGroup;
+use app\models\Dock;
 use app\models\Goods;
 use app\models\GoodsCard;
 use app\models\GoodsCat;
@@ -113,6 +114,7 @@ class GoodsForm extends Model
             'goods_num' => '商品库存',
             'dock' => '码头',
             'dock_id' => '码头id',
+            'address'=>'商品地址'
 
         ];
     }
@@ -203,8 +205,20 @@ class GoodsForm extends Model
             $goods->timelong = $this->timelong;
             $goods->dock = $this->dock;
             $goods->parameter = $this->parameter;
-            $goods->address = $this->address;
+            //$goods->address = $this->address;
             $goods->dock_id = $this->dock_id;
+
+            /* 要注意的代码*/
+
+
+
+
+            $dock=Dock::findOne(['id'=>$this->dock_id]);
+            $goods->dock=$dock->name;
+
+            $goods->address=$dock->address;
+            $goods->latitude=$dock->latitude;
+            $goods->longitude=$dock->longitude;
             if ($goods->save()) {
                 //多分类设置
                 GoodsCat::updateAll(['is_delete' => 1], ['goods_id' => $goods->id]);

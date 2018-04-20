@@ -1041,7 +1041,7 @@ if (!$returnUrl)
         enableContextMenu: false,
         autoHeightEnabled: false,
     });
-    var ue = UE.getEditor('parameter', {
+    var parameter = UE.getEditor('parameter', {
         serverUrl: "<?=$urlManager->createUrl(['upload/ue'])?>",
         enableAutoSave: false,
         saveInterval: 1000 * 3600,
@@ -1291,6 +1291,7 @@ if (!$returnUrl)
                     page.attr_group_list = res.data.attr_group_list;
                     page.checked_attr_list = res.data.checked_attr_list;
                     ue.setContent(res.data.detail_info + "");
+
                     var pic = res.data.picsPath;
 
                     if (pic) {
@@ -1377,8 +1378,7 @@ if (!$returnUrl)
                     $("input[name='model[timelong]']").val(res.data.timelong);
                     $("input[name='model[time]']").val(res.data.time);
                     $("input[name='model[capacity]']").val(res.data.capacity);
-
-
+                    $("input[name='model[parameter]']").val(res.data.parameter);
 
 
 
@@ -1393,6 +1393,7 @@ if (!$returnUrl)
                     page.attr_group_list = JSON.parse(res.data.attr_group_list);
                     page.checked_attr_list = JSON.parse(res.data.checked_attr_list);
                     ue.setContent(res.data.detail + "");
+                    parameter.setContent(res.data.parameter + "");
                     var pic = res.data.pic;
 
                     if (res.data.use_attr ==1){

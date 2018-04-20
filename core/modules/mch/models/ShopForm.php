@@ -24,7 +24,6 @@ class ShopForm extends Model
     public $store_id;
     public $shop;
     public $limit;
-
     public $name;
     public $mobile;
     public $address;
@@ -40,6 +39,7 @@ class ShopForm extends Model
     public $password;
     public $docks_name;
     public $docks_id;
+
     public function rules()
     {
         return [
@@ -64,6 +64,8 @@ class ShopForm extends Model
             'pic_url'=>'门店小图',
             'content'=>'门店介绍',
             'shop_time'=>'营业时间',
+            'docks_name'=>'码头名称',
+            'docks_id'=>'码头id'
         ];
     }
 
@@ -78,7 +80,12 @@ class ShopForm extends Model
             $shop->addtime = time();
             $shop->store_id = $this->store_id;
         }
+        if($this->docks_name==''){
+
+            $this->docks_id=null;
+        }
         $shop->attributes = $this->attributes;
+
         if(is_array($this->shop_pic)){
             $shop->cover_url = $this->shop_pic[0];
         }

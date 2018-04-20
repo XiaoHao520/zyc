@@ -87,7 +87,8 @@ class GoodsForm extends Model
                 'dock'=>$goods->dock,
                 'address'=>$goods->address,
                 'latitude'=>$goods->latitude,
-                'longitude'=>$goods->longitude
+                'longitude'=>$goods->longitude,
+                'dock_id'=>$goods->dock_id
             ],
         ];
     }

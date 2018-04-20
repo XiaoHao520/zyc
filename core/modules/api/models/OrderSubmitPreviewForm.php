@@ -32,14 +32,13 @@ class OrderSubmitPreviewForm extends Model
 {
     public $store_id;
     public $user_id;
-
     public $address_id;
-
     public $cart_id_list;
     public $goods_info;
-
     public $longitude;
     public $latitude;
+    public $goods_dock_id;
+
 
     public function rules()
     {
@@ -53,6 +52,7 @@ class OrderSubmitPreviewForm extends Model
     public function search()
     {
         $store = Store::findOne($this->store_id);
+
         if (!$this->validate())
             return $this->getModelError();
         if ($this->cart_id_list)
@@ -60,12 +60,18 @@ class OrderSubmitPreviewForm extends Model
 
         if ($this->goods_info)
             $res = $this->getDataByGoodsInfo($this->goods_info, $store);
+
+
         $buyMaxRes = $this->checkBuyMax($res['data']['list']);
         if ($buyMaxRes)
             return $buyMaxRes;
 
         if ($res['code'] == 0) {
             $res['data']['coupon_list'] = $this->getCouponList($res['data']['total_price']);
+            $goods_info = json_decode($this->goods_info);
+            $goods_id=$goods_info->goods_id;
+            $goods=Goods::findOne(['id'=>$goods_id]);
+            $this->goods_dock_id=$goods->dock_id;
             $res['data']['shop_list'] = $this->getShopList();
         }
         $level = Level::find()->select([
@@ -108,6 +114,7 @@ class OrderSubmitPreviewForm extends Model
             $res['data']['express_price'] = 0;
         }
         $res['data']['is_payment'] = json_decode(Option::get('payment',$store->id,'admin'),true);
+
         return $res;
     }
 
@@ -155,8 +162,10 @@ class OrderSubmitPreviewForm extends Model
             $list[$i]['event_desc'] = $events[$item['event']];
             $list[$i]['min_price'] = doubleval($item['min_price']);
             $list[$i]['sub_price'] = doubleval($item['sub_price']);
+
             $new_list[] = $list[$i];
         }
+
 
         return $new_list;
     }
@@ -507,28 +516,39 @@ class OrderSubmitPreviewForm extends Model
 
     private function getShopList()
     {
-        $list = Shop::find()->select(['address', 'mobile', 'id', 'name', 'longitude', 'latitude'])
-            ->where(['store_id' => $this->store_id, 'is_delete' => 0])->asArray()->all();
+        $list = Shop::find()->select(['address', 'mobile', 'id', 'name', 'longitude', 'latitude','docks_id','docks_name'])
+            ->where(['store_id' => $this->store_id, 'is_delete' => 0])->andWhere(['not',['docks_id'=>null]])->andWhere(['not',['docks_name'=>null]])->asArray()->all();
         $distance = array();
-        foreach ($list as $index => $item) {
-            $list[$index]['distance'] = -1;
+
+        $list2=[];
+
+        for($i=0;$i<count($list);$i++){
+         $arr=explode(",",$list[$i]['docks_id']);
+           for($j=0;$j<count($arr);$j++){
+               if($arr[$j]==$this->goods_dock_id){
+                  array_push($list2,$list[$i]);
+               }
+           }
+        }
+       foreach ($list2 as $index => $item) {
+            $list2[$index]['distance'] = -1;
             if ($item['longitude'] && $this->longitude) {
                 $from = [$this->longitude, $this->latitude];
                 $to = [$item['longitude'], $item['latitude']];
-                $list[$index]['distance'] = $this->get_distance($from, $to, false, 2);
+                $list2[$index]['distance'] = $this->get_distance($from, $to, false, 2);
             }
-            $distance[] = $list[$index]['distance'];
+            $distance[] = $list2[$index]['distance'];
         }
         array_multisort($distance, SORT_ASC, $list);
-        $min = min(count($list), 30);
+        $min = min(count($list2), 30);
         $list_arr = array();
-        foreach ($list as $index => $item) {
+        foreach ($list2 as $index => $item) {
             if ($index <= $min) {
-                $list[$index]['distance'] = $this->distance($item['distance']);
-                array_push($list_arr, $list[$index]);
+                $list2[$index]['distance'] = $this->distance($item['distance']);
+                array_push($list_arr, $list2[$index]);
             }
         }
-        return $list;
+        return $list2;
     }
 
     /**

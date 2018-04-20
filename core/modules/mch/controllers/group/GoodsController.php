@@ -416,7 +416,8 @@ class GoodsController extends Controller
                 'timelong' => $goods->timelong,
                 'capacity' => $goods->capacity,
                 'time' => $goods->time,
-                'dock_id'=>$goods->dock_id
+                'dock_id'=>$goods->dock_id,
+                'parameter'=>$goods->parameter
             ],
         ]);
 

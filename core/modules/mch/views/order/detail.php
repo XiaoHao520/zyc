@@ -38,6 +38,14 @@ $this->params['active_nav_group'] = 3;
                             <tr>
                                 <td>下单时间</td>
                                 <td><?= date('Y-m-d H:i', $order['addtime']) ?></td>
+
+
+                            </tr>
+                            <tr>
+                                <td>出发时间</td>
+                                <td><?=$order['date']." ".$order['time']?></td>
+
+
                             </tr>
                             <tr>
                                 <td>用户</td>
@@ -54,20 +62,21 @@ $this->params['active_nav_group'] = 3;
                                 </td>
                             </tr>
                             <tr>
-                                <td>收货信息</td>
+                                <td>联系人信息</td>
                                 <td>
                                     <div>
-                                        <span>收货人：<?= $order['name'] ?></span>
+                                        <span>联系人：<?= $order['name'] ?></span>
                                     </div>
                                     <div>
                                         <span>电话：<?= $order['mobile'] ?></span>
                                     </div>
+
                                     <?php if ($order['address']): ?>
-                                        <div>
-                                            <span>收货地址：<?= $order['address'] ?></span>
+                                        <div style="display: none">
+                                            <span>联系地址：<?= $order['address'] ?></span>
                                         </div>
                                     <?php else: ?>
-                                        <div>
+                                        <div style="display: none;">
                                             <span>收货方式：上门自提</span>
                                         </div>
                                     <?php endif; ?>
@@ -248,6 +257,26 @@ $this->params['active_nav_group'] = 3;
                                     <td colspan="2"><?= $order['content'] ?></td>
                                 </tr>
                             <?php endif; ?>
+                        </table>
+                        <table class="table table-bordered">
+                            <tr>
+                                <td colspan="3" style="text-align: center">保险信息</td>
+                            </tr>
+
+
+                            <?php foreach ($baoxian_list as $baoxian): ?>
+                                <tr>
+                                    <td rowspan="4"><?= $baoxian['name'] ?></td>
+                                    <td class="text-right">电话</td>
+                                    <td><?= $baoxian['tel'] ?></td>
+                                </tr>
+                                <tr>
+                                    <td>身份证号</td>
+                                    <td><?= $baoxian['idCard'] ?></td>
+                                </tr>
+
+                            <?php endforeach; ?>
+
                         </table>
                     </div>
                 </div>

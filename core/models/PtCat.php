@@ -14,6 +14,7 @@ use Yii;
  * @property integer $sort
  * @property string $addtime
  * @property integer $is_delete
+ * @property integer $buy_method
  */
 class PtCat extends \yii\db\ActiveRecord
 {
@@ -34,6 +35,7 @@ class PtCat extends \yii\db\ActiveRecord
             [['name', 'store_id', 'pic_url'], 'required'],
             [['store_id', 'sort', 'addtime', 'is_delete'], 'integer'],
             [['pic_url'], 'string'],
+            [['buy_method'], 'integer'],
             [['name'], 'string', 'max' => 255],
         ];
     }
@@ -51,6 +53,7 @@ class PtCat extends \yii\db\ActiveRecord
             'sort' => '排序 升序',
             'addtime' => 'Addtime',
             'is_delete' => 'Is Delete',
+            'buy_method'=>'下单方式'
         ];
     }
 }

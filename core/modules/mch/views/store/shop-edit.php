@@ -264,7 +264,7 @@ $this->params['active_nav_group'] = 1;
 $('input:checkbox').click(
 
     function () {
-        var str='';
+        var names='';
          var ids=''
         console.log(this.id)
 
@@ -272,13 +272,14 @@ $('input:checkbox').click(
             if($(this).is(":checked"))
             {
                ids+=this.id+',';
-               str+=$(this).val()+',';
-               console.log(str)
+                names+=$(this).val()+',';
+               console.log(names)
             }
         });
+          ids=ids.slice(0,ids.length-1);
+        names=names.slice(0,names.length-1);
          $("input[name='docks_id']").val(ids);
-         $("input[name='docks_name']").val(str);
-
+         $("input[name='docks_name']").val(names);
     }
  )
 

@@ -9,6 +9,7 @@
 namespace app\modules\mch\controllers;
 
 
+use app\models\Dock;
 use app\models\IntegralLog;
 use app\models\JiFenSetting;
 use app\models\Level;
@@ -51,7 +52,7 @@ class UserController extends Controller
      * @return null
      * 设置/取消核销员
      */
-    public function actionClerkEdit($id = null, $status = 0, $shop_id = 0, $edit = 0)
+    public function actionClerkEdit($id = null, $status = 0, $shop_id = 0, $edit = 0,$dock_id=0)
     {
         $user = User::findOne(['id' => $id, 'is_delete' => 0, 'store_id' => $this->store->id]);
         if (!$user) {
@@ -61,14 +62,26 @@ class UserController extends Controller
             ]);
         }
         if ($status == 1) {
-            $shop_exit = Shop::find()->where(['store_id' => $this->store->id, 'is_delete' => 0, 'id' => $shop_id])->exists();
-            if (!$shop_exit) {
+            // $shop_exit = Shop::find()->where(['store_id' => $this->store->id, 'is_delete' => 0, 'id' => $shop_id])->exists();
+             $dock_exit=Dock::find()->where(['store_id'=>$this->store->id,'is_delete'=>0,'id'=>$dock_id])->exists();
+
+
+             if(!$dock_exit){
+                 return $this->renderJson([
+                     'code' => 1,
+                     'msg' => '码头不存在'
+                 ]);
+
+             }
+
+           /* if (!$shop_exit) {
                 return $this->renderJson([
                     'code' => 1,
                     'msg' => '店铺不存在'
                 ]);
-            }
-            $user->shop_id = $shop_id;
+            }*/
+         //   $user->shop_id = $shop_id;
+            $user->dock_id=$dock_id;
         }
         if ($edit == 0) {
             if ($user->is_clerk == $status) {
@@ -109,12 +122,16 @@ class UserController extends Controller
         $data = $form->search();
         $data_list = $form->getUser();
         $shop_list = Shop::find()->where(['store_id' => $this->store->id, 'is_delete' => 0])->asArray()->all();
+        $dock_list=Dock::find()->where(['store_id'=>$this->store->id,'is_delete'=>0])->asArray()->all();
+
         return $this->render('clerk', [
             'row_count' => $data['row_count'],
             'pagination' => $data['pagination'],
             'list' => $data['list'],
             'user_list' => json_encode($data_list, JSON_UNESCAPED_UNICODE),
             'shop_list' => json_encode($shop_list, JSON_UNESCAPED_UNICODE),
+            'dock_list'=>json_encode($dock_list,JSON_UNESCAPED_UNICODE),
+
         ]);
     }
 

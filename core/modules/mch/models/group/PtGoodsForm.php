@@ -11,6 +11,7 @@ namespace app\modules\mch\models\group;
 
 use app\models\Attr;
 use app\models\AttrGroup;
+use app\models\Dock;
 use app\models\PtGoods;
 use app\models\PtGoodsPic;
 use app\modules\mch\models\Model;
@@ -19,16 +20,13 @@ use yii\data\Pagination;
 class PtGoodsForm extends Model
 {
     public $goods;
-
     public $goods_pic_list;
-
     public $name;
     public $store_id;
     public $original_price;
     public $price;
     public $detail;
     public $cat_id;
-
     public $grouptime;
     public $attr;
     public $service;
@@ -68,12 +66,12 @@ class PtGoodsForm extends Model
             [['store_id', 'name', 'original_price', 'price', 'detail', 'group_num', 'grouptime', 'cat_id','address','time','capacity','dock','dock_id'], 'required'],
             [['store_id', 'cat_id', 'grouptime', 'sort', 'virtual_sales', 'weight', 'freight', 'group_num', 'limit_time', 'is_only', 'is_more', 'buy_limit', 'type', 'use_attr'], 'integer'],
             [['original_price', 'price', 'colonel'], 'number'],
-            [['detail', 'cover_pic','parameter','time'], 'string'],
+            [['detail', 'cover_pic','parameter','time','capacity'], 'string'],
             [['attr','goods_pic_list',], 'safe',],
-            [['name', 'unit','address'], 'string', 'max' => 255],
+            [['name', 'unit','address','timelong',], 'string', 'max' => 255],
             [['service'], 'string', 'max' => 2000],
-            [['goods_num','capacity','dock_id'], 'integer', 'min' => 0,],
-            [['timelong', 'longitude', 'latitude'],'double','min'=>0],
+            [['goods_num','dock_id'], 'integer', 'min' => 0,],
+            [['longitude', 'latitude'],'double','min'=>0],
         ];
     }
 
@@ -187,6 +185,11 @@ class PtGoodsForm extends Model
                 $this->virtual_sales = 0;
 
             $goods = $this->goods;
+
+
+
+
+
             if ($goods->isNewRecord) {
                 $goods->is_delete = 0;
                 $goods->is_hot = 0;
@@ -194,6 +197,12 @@ class PtGoodsForm extends Model
                 $goods->status = 2;
                 $goods->attr = json_encode([], JSON_UNESCAPED_UNICODE);
             }
+
+
+
+
+
+
 
 //            $this->full_cut = json_encode($this->full_cut,JSON_UNESCAPED_UNICODE);
 //            if (!isset($this->integral['more'])){
@@ -207,6 +216,11 @@ class PtGoodsForm extends Model
             unset($_this_attributes['attr']);
             $goods->attributes = $_this_attributes;
             $goods->use_attr = $this->use_attr ? 1 : 0;
+            $dock=Dock::findOne(['id'=>$this->dock_id]);
+
+            $goods->dock=$dock->name;
+            $goods->dock_id=$this->dock_id;
+            $goods->address=$dock->address;
             if ($goods->save()) {
                 PtGoodsPic::updateAll(['is_delete' => 1], ['goods_id' => $goods->id]);
                 foreach ($this->goods_pic_list as $pic_url) {

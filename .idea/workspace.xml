@@ -7,37 +7,14 @@
   <component name="ChangeListManager">
     <list default="true" id="52e363fc-ad45-431a-84e2-a29029d71453" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/core/models/Address.php" afterPath="$PROJECT_DIR$/core/models/Address.php" />
-      <change beforePath="$PROJECT_DIR$/core/models/Order.php" afterPath="$PROJECT_DIR$/core/models/Order.php" />
-      <change beforePath="$PROJECT_DIR$/core/models/PtCat.php" afterPath="$PROJECT_DIR$/core/models/PtCat.php" />
-      <change beforePath="$PROJECT_DIR$/core/models/PtOrder.php" afterPath="$PROJECT_DIR$/core/models/PtOrder.php" />
-      <change beforePath="$PROJECT_DIR$/core/models/User.php" afterPath="$PROJECT_DIR$/core/models/User.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/api/controllers/OrderController.php" afterPath="$PROJECT_DIR$/core/modules/api/controllers/OrderController.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/api/models/AddressSaveForm.php" afterPath="$PROJECT_DIR$/core/modules/api/models/AddressSaveForm.php" />
+      <change beforePath="$PROJECT_DIR$/core/models/Goods.php" afterPath="$PROJECT_DIR$/core/models/Goods.php" />
+      <change beforePath="$PROJECT_DIR$/core/models/PtGoods.php" afterPath="$PROJECT_DIR$/core/models/PtGoods.php" />
       <change beforePath="$PROJECT_DIR$/core/modules/api/models/GoodsAreaListForm.php" afterPath="$PROJECT_DIR$/core/modules/api/models/GoodsAreaListForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/api/models/GoodsForm.php" afterPath="$PROJECT_DIR$/core/modules/api/models/GoodsForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/api/models/GoodsListForm.php" afterPath="$PROJECT_DIR$/core/modules/api/models/GoodsListForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/api/models/OrderClerkForm.php" afterPath="$PROJECT_DIR$/core/modules/api/models/OrderClerkForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/api/models/OrderSubmitForm.php" afterPath="$PROJECT_DIR$/core/modules/api/models/OrderSubmitForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/api/models/OrderSubmitPreviewForm.php" afterPath="$PROJECT_DIR$/core/modules/api/models/OrderSubmitPreviewForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/api/models/group/OrderSubmitForm.php" afterPath="$PROJECT_DIR$/core/modules/api/models/group/OrderSubmitForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/api/models/group/PtGoodsForm.php" afterPath="$PROJECT_DIR$/core/modules/api/models/group/PtGoodsForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/controllers/GoodsController.php" afterPath="$PROJECT_DIR$/core/modules/mch/controllers/GoodsController.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/controllers/OrderController.php" afterPath="$PROJECT_DIR$/core/modules/mch/controllers/OrderController.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/controllers/UserController.php" afterPath="$PROJECT_DIR$/core/modules/mch/controllers/UserController.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/controllers/group/GoodsController.php" afterPath="$PROJECT_DIR$/core/modules/mch/controllers/group/GoodsController.php" />
       <change beforePath="$PROJECT_DIR$/core/modules/mch/models/GoodsForm.php" afterPath="$PROJECT_DIR$/core/modules/mch/models/GoodsForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/models/ShopForm.php" afterPath="$PROJECT_DIR$/core/modules/mch/models/ShopForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/models/UserListForm.php" afterPath="$PROJECT_DIR$/core/modules/mch/models/UserListForm.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/models/group/PtCatForm.php" afterPath="$PROJECT_DIR$/core/modules/mch/models/group/PtCatForm.php" />
       <change beforePath="$PROJECT_DIR$/core/modules/mch/models/group/PtGoodsForm.php" afterPath="$PROJECT_DIR$/core/modules/mch/models/group/PtGoodsForm.php" />
       <change beforePath="$PROJECT_DIR$/core/modules/mch/views/goods/goods-edit.php" afterPath="$PROJECT_DIR$/core/modules/mch/views/goods/goods-edit.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/views/group/goods/cat-edit.php" afterPath="$PROJECT_DIR$/core/modules/mch/views/group/goods/cat-edit.php" />
       <change beforePath="$PROJECT_DIR$/core/modules/mch/views/group/goods/goods-edit.php" afterPath="$PROJECT_DIR$/core/modules/mch/views/group/goods/goods-edit.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/views/order/detail.php" afterPath="$PROJECT_DIR$/core/modules/mch/views/order/detail.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/views/order/index.php" afterPath="$PROJECT_DIR$/core/modules/mch/views/order/index.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/views/store/shop-edit.php" afterPath="$PROJECT_DIR$/core/modules/mch/views/store/shop-edit.php" />
-      <change beforePath="$PROJECT_DIR$/core/modules/mch/views/user/clerk.php" afterPath="$PROJECT_DIR$/core/modules/mch/views/user/clerk.php" />
+      <change beforePath="$PROJECT_DIR$/core/modules/mch/views/store/navbar.php" afterPath="$PROJECT_DIR$/core/modules/mch/views/store/navbar.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -59,21 +36,71 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7299578">
+    <splitter split-orientation="horizontal" split-proportion="0.81580806">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="cat-edit.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/modules/mch/views/group/goods/cat-edit.php">
+          <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/DefaultController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="407">
-                  <caret line="45" column="68" lean-forward="false" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="68" />
+                <state relative-caret-position="874">
+                  <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="36" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/group/IndexController.php">
+          <file leaf-file-name="GoodsForm.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/modules/mch/models/GoodsForm.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1159">
+                  <caret line="74" column="90" lean-forward="false" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="90" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="GoodsAreaListForm.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/modules/api/models/GoodsAreaListForm.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="646">
+                  <caret line="88" column="27" lean-forward="false" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="JiFenSettingForm.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/modules/mch/models/JiFenSettingForm.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="342">
+                  <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="JifenController.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/JifenController.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="570">
+                  <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MchMenu.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/modules/mch/models/MchMenu.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="532">
+                  <caret line="243" column="22" lean-forward="false" selection-start-line="234" selection-start-column="21" selection-end-line="243" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="jifen-edit.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/modules/mch/views/user/jifen-edit.php">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
                   <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -82,81 +109,31 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="GoodsController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/group/GoodsController.php">
+          <file leaf-file-name="UserController.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/UserController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="713">
+                  <caret line="489" column="5" lean-forward="false" selection-start-line="460" selection-start-column="3" selection-end-line="489" selection-end-column="5" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/group/IndexController.php">
+          <file leaf-file-name="Goods.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/core/models/Goods.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="115" column="41" lean-forward="false" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
+                <state relative-caret-position="1026">
+                  <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="PtGoodsForm.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/modules/api/models/group/PtGoodsForm.php">
+            <entry file="file://$PROJECT_DIR$/core/modules/mch/models/group/PtGoodsForm.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="494">
-                  <caret line="176" column="23" lean-forward="true" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="OrderController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/group/OrderController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="380">
-                  <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="OrderSubmitForm.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/core/modules/api/models/group/OrderSubmitForm.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="532">
-                  <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PtOrder.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/models/PtOrder.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="73" column="42" lean-forward="false" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="42" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PtCatForm.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/modules/mch/models/group/PtCatForm.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="551">
-                  <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PtCat.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/core/models/PtCat.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="464">
-                  <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+                <state relative-caret-position="4199">
+                  <caret line="232" column="39" lean-forward="false" selection-start-line="232" selection-start-column="39" selection-end-line="232" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
@@ -215,10 +192,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>page</find>
-      <find>vue</find>
-      <find>json_encode</find>
-      <find>getshop</find>
       <find>findOne</find>
       <find>shop_list</find>
       <find>shop</find>
@@ -243,8 +216,12 @@
       <find>detail</find>
       <find>$info</find>
       <find>cat</find>
-      <find>ptgood</find>
       <find>default</find>
+      <find>ptgood</find>
+      <find>nav</find>
+      <find>goodse</find>
+      <find>timelong</find>
+      <find>capacity</find>
     </findStrings>
     <replaceStrings>
       <replace>name=&quot;model[time]&quot;</replace>
@@ -257,7 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/models/JiFenSetting.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/models/DockForm.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/views/jifensetting/index.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/models/MchMenu.php" />
@@ -274,7 +250,6 @@
         <option value="$PROJECT_DIR$/core/models/PtGoods.php" />
         <option value="$PROJECT_DIR$/core/modules/api/models/OrderPayDataForm.php" />
         <option value="$PROJECT_DIR$/core/models/Attr.php" />
-        <option value="$PROJECT_DIR$/core/models/Goods.php" />
         <option value="$PROJECT_DIR$/core/models/Shop.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/controllers/StoreController.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/views/store/shop-edit.php" />
@@ -297,17 +272,19 @@
         <option value="$PROJECT_DIR$/core/modules/mch/views/order/detail.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/views/order/index.php" />
         <option value="$PROJECT_DIR$/core/modules/api/models/OrderClerkForm.php" />
-        <option value="$PROJECT_DIR$/core/modules/mch/models/group/PtGoodsForm.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/controllers/group/GoodsController.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/views/group/goods/goods-edit.php" />
-        <option value="$PROJECT_DIR$/core/modules/api/models/GoodsAreaListForm.php" />
-        <option value="$PROJECT_DIR$/core/modules/mch/models/GoodsForm.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/views/group/goods/cat-edit.php" />
         <option value="$PROJECT_DIR$/core/models/PtCat.php" />
         <option value="$PROJECT_DIR$/core/modules/mch/models/group/PtCatForm.php" />
         <option value="$PROJECT_DIR$/core/modules/api/models/group/PtGoodsForm.php" />
         <option value="$PROJECT_DIR$/core/models/PtOrder.php" />
         <option value="$PROJECT_DIR$/core/modules/api/models/group/OrderSubmitForm.php" />
+        <option value="$PROJECT_DIR$/core/modules/mch/views/store/navbar.php" />
+        <option value="$PROJECT_DIR$/core/modules/mch/models/group/PtGoodsForm.php" />
+        <option value="$PROJECT_DIR$/core/modules/mch/models/GoodsForm.php" />
+        <option value="$PROJECT_DIR$/core/models/Goods.php" />
+        <option value="$PROJECT_DIR$/core/modules/api/models/GoodsAreaListForm.php" />
       </list>
     </option>
   </component>
@@ -318,11 +295,11 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="781" />
-    <option name="y" value="295" />
-    <option name="width" value="1613" />
-    <option name="height" value="883" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="410" />
+    <option name="y" value="105" />
+    <option name="width" value="1936" />
+    <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -342,112 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="api" type="cbb8eebc:String" user="api" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="api" type="cbb8eebc:String" user="api" />
-              <item name="controllers" type="cbb8eebc:String" user="controllers" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="api" type="cbb8eebc:String" user="api" />
-              <item name="controllers" type="cbb8eebc:String" user="controllers" />
-              <item name="group" type="cbb8eebc:String" user="group" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="mch" type="cbb8eebc:String" user="mch" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="mch" type="cbb8eebc:String" user="mch" />
-              <item name="controllers" type="cbb8eebc:String" user="controllers" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="mch" type="cbb8eebc:String" user="mch" />
-              <item name="controllers" type="cbb8eebc:String" user="controllers" />
-              <item name="group" type="cbb8eebc:String" user="group" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="mch" type="cbb8eebc:String" user="mch" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="mch" type="cbb8eebc:String" user="mch" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="group" type="cbb8eebc:String" user="group" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="mch" type="cbb8eebc:String" user="mch" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="group" type="cbb8eebc:String" user="group" />
-              <item name="goods" type="cbb8eebc:String" user="goods" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
-              <item name="core" type="cbb8eebc:String" user="core" />
-              <item name="modules" type="cbb8eebc:String" user="modules" />
-              <item name="mch" type="cbb8eebc:String" user="mch" />
-              <item name="views" type="cbb8eebc:String" user="views" />
-              <item name="store" type="cbb8eebc:String" user="store" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -524,6 +395,60 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="modules" type="cbb8eebc:String" user="modules" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="modules" type="cbb8eebc:String" user="modules" />
+              <item name="mch" type="cbb8eebc:String" user="mch" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="modules" type="cbb8eebc:String" user="modules" />
+              <item name="mch" type="cbb8eebc:String" user="mch" />
+              <item name="controllers" type="cbb8eebc:String" user="controllers" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="modules" type="cbb8eebc:String" user="modules" />
+              <item name="mch" type="cbb8eebc:String" user="mch" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="zjhj_mall" type="cbb8eebc:String" user="zjhj_mall" />
+              <item name="core" type="cbb8eebc:String" user="core" />
+              <item name="modules" type="cbb8eebc:String" user="modules" />
+              <item name="mch" type="cbb8eebc:String" user="mch" />
+              <item name="views" type="cbb8eebc:String" user="views" />
+              <item name="user" type="cbb8eebc:String" user="user" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scratches" />
     </panes>
   </component>
@@ -595,12 +520,16 @@
       <workItem from="1523497975177" duration="4482000" />
       <workItem from="1523839196180" duration="6411000" />
       <workItem from="1523847238382" duration="43962000" />
-      <workItem from="1524191127150" duration="8287000" />
+      <workItem from="1524191127150" duration="13648000" />
+      <workItem from="1524464326886" duration="872000" />
+      <workItem from="1524472907370" duration="878000" />
+      <workItem from="1524552436688" duration="728000" />
+      <workItem from="1524630042116" duration="1724000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230895000" />
+    <option name="totallyTimeSpent" value="240458000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,15 +541,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <frame x="410" y="105" width="1936" height="1066" extended-state="1" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24200426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20948827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32938644" sideWeight="0.5053305" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13347685" sideWeight="0.4936034" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -631,6 +558,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13347685" sideWeight="0.4936034" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -644,105 +572,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core/vendor/yiisoft/yii2/db/BaseActiveRecord.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="639" column="20" lean-forward="false" selection-start-line="639" selection-start-column="20" selection-end-line="639" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/models/Attr.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="42" column="37" lean-forward="true" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/views/article/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-918">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/views/store/slide-edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/models/Shop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
-          <caret line="49" column="62" lean-forward="false" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/views/store/shop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/views/store/shop-edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="883">
-          <caret line="270" column="21" lean-forward="false" selection-start-line="270" selection-start-column="17" selection-end-line="270" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/ShopForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="69" column="5" lean-forward="false" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/api/models/OrderSubmitPreviewForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="549" column="9" lean-forward="false" selection-start-line="549" selection-start-column="9" selection-end-line="549" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="90" column="24" lean-forward="false" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="117" column="25" lean-forward="true" selection-start-line="117" selection-start-column="25" selection-end-line="117" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/UserListForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/api/models/OrderDetailForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/models/OrderDetail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -768,14 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="365" column="33" lean-forward="true" selection-start-line="365" selection-start-column="33" selection-end-line="365" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/models/Goods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3137">
-          <caret line="48" column="6" lean-forward="false" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,7 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="321">
           <caret line="194" column="30" lean-forward="true" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -826,17 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="836">
           <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
-          <folding>
-            <element signature="e#131#152#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/group/PtGoodsForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -844,12 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26505">
           <caret line="1395" column="59" lean-forward="false" selection-start-line="1395" selection-start-column="59" selection-end-line="1395" selection-end-column="59" />
-          <folding>
-            <marker date="1524043231694" expanded="true" signature="61948:61955" ph="×" />
-            <marker date="1524043231694" expanded="true" signature="61999:62006" ph="×" />
-            <marker date="1524043231694" expanded="true" signature="67367:67374" ph="×" />
-            <marker date="1524043231694" expanded="true" signature="67418:67425" ph="×" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -857,23 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="950">
           <caret line="74" column="23" lean-forward="false" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="80" column="31" lean-forward="false" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/api/models/GoodsAreaListForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="131" column="9" lean-forward="false" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -912,19 +703,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/GoodsForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="256" column="0" lean-forward="false" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/group/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="34" column="25" lean-forward="false" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -932,7 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="53" column="21" lean-forward="false" selection-start-line="53" selection-start-column="21" selection-end-line="53" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -940,15 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/StoreController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="251" column="38" lean-forward="false" selection-start-line="251" selection-start-column="34" selection-end-line="251" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +728,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="197" column="18" lean-forward="true" selection-start-line="177" selection-start-column="11" selection-end-line="197" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,23 +735,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="45" column="68" lean-forward="false" selection-start-line="45" selection-start-column="58" selection-end-line="45" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/models/PtCat.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
-          <caret line="51" column="35" lean-forward="true" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
-          <folding />
+          <caret line="51" column="35" lean-forward="false" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/modules/mch/models/group/PtCatForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding />
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -988,15 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/group/GoodsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1004,7 +763,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="115" column="41" lean-forward="false" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1012,23 +770,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
           <caret line="47" column="6" lean-forward="false" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/modules/api/models/group/PtGoodsForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
-          <caret line="176" column="23" lean-forward="true" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
-          <folding />
+          <caret line="176" column="23" lean-forward="false" selection-start-line="176" selection-start-column="23" selection-end-line="176" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/group/OrderController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="60" column="31" lean-forward="true" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
-          <folding />
+          <caret line="60" column="31" lean-forward="false" selection-start-line="60" selection-start-column="31" selection-end-line="60" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1036,14 +791,167 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="73" column="42" lean-forward="false" selection-start-line="73" selection-start-column="35" selection-end-line="73" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/core/modules/api/models/group/OrderSubmitForm.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="38" column="20" lean-forward="false" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/HomeNavEditForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/models/HomeNav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/models/Option.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/models/AppNavbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="36" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/views/store/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7467">
+          <caret line="393" column="23" lean-forward="false" selection-start-line="393" selection-start-column="19" selection-end-line="393" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/StoreController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17784">
+          <caret line="1001" column="31" lean-forward="false" selection-start-line="1001" selection-start-column="31" selection-end-line="1001" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/NavbarEditForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/group/GoodsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2071">
+          <caret line="124" column="41" lean-forward="false" selection-start-line="124" selection-start-column="35" selection-end-line="124" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/group/PtGoodsForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4199">
+          <caret line="232" column="39" lean-forward="false" selection-start-line="232" selection-start-column="39" selection-end-line="232" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/GoodsForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1159">
+          <caret line="74" column="90" lean-forward="false" selection-start-line="74" selection-start-column="82" selection-end-line="74" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/vendor/fzaninotto/faker/src/Faker/Provider/es_PE/Company.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/models/Goods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="55" column="28" lean-forward="false" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="80" column="29" lean-forward="false" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/api/models/GoodsAreaListForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="88" column="27" lean-forward="false" selection-start-line="88" selection-start-column="27" selection-end-line="88" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/JiFenSettingForm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/api/controllers/JifenController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/models/MchMenu.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
-          <caret line="48" column="16" lean-forward="true" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+          <caret line="243" column="22" lean-forward="false" selection-start-line="234" selection-start-column="21" selection-end-line="243" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/views/user/jifen-edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/modules/mch/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="489" column="5" lean-forward="false" selection-start-line="460" selection-start-column="3" selection-end-line="489" selection-end-column="5" />
           <folding />
         </state>
       </provider>

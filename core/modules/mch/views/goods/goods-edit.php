@@ -348,7 +348,7 @@ if (!$returnUrl)
                             <label class=" col-form-label">核载人数</label>
                         </div>
                         <div class="col-9">
-                            <input class="form-control short-row" type="number" name="model[capacity]"
+                            <input class="form-control short-row" type="text" name="model[capacity]"
                                    value="<?= $goods['capacity'] ?>">
                         </div>
                     </div>
@@ -357,7 +357,7 @@ if (!$returnUrl)
                             <label class=" col-form-label">时长(单位:小时)</label>
                         </div>
                         <div class="col-9">
-                            <input class="form-control short-row" type="number" name="model[timelong]"
+                            <input class="form-control short-row" type="text" name="model[timelong]"
                                    value="<?= $goods['timelong'] ?>">
                         </div>
                     </div>

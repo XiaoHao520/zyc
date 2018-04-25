@@ -35,7 +35,7 @@ use Yii;
  * @property string $buy_limit
  * @property string $type
  * @property string $use_attr
- * @property double $timelong
+ * @property string $timelong
  * @property integer $capacity
  * @property String $parameter
  * @property String $address
@@ -65,7 +65,7 @@ class PtGoods extends \yii\db\ActiveRecord
             [['store_id', 'cat_id', 'status', 'grouptime', 'sort', 'virtual_sales', 'weight', 'freight', 'addtime', 'is_delete', 'group_num', 'is_hot', 'limit_time', 'is_only', 'is_more', 'buy_limit', 'type', 'use_attr','dock_id','capacity'], 'integer'],
             [['original_price', 'price', 'colonel','latitude','longitude','timelong'], 'number'],
             [['detail', 'attr', 'cover_pic','address','dock','parameter'], 'string'],
-            [['name', 'unit'], 'string', 'max' => 255],
+            [['name', 'unit','timelong'], 'string', 'max' => 255],
             [['service'], 'string', 'max' => 2000],
         ];
     }

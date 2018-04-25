@@ -36,7 +36,7 @@ use yii\helpers\VarDumper;
  * @property string $integral
  * @property integer $use_attr
  * @property integer $share_type
- * @property double $timelong
+ * @property string $timelong
  * @property integer $capacity
  * @property String $parameter
  * @property String $address
@@ -66,9 +66,9 @@ class Goods extends \yii\db\ActiveRecord
             [['store_id', 'cat_id', 'status', 'addtime', 'is_delete', 'sort', 'virtual_sales', 'individual_share', 'freight', 'use_attr', 'share_type'], 'integer'],
             [['price', 'original_price', 'share_commission_first', 'share_commission_second', 'share_commission_third', 'weight','latitude','longitude'], 'number'],
             [['detail', 'attr', 'cover_pic', 'video_url', 'full_cut', 'integral','dock'], 'string'],
-            [['name', 'unit'], 'string', 'max' => 255],
+            [['name', 'unit','timelong'], 'string', 'max' => 255],
             [['service'], 'string', 'max' => 2000],
-            [['timelong'], 'double', 'max' => 2000],
+
         ];
     }
 
